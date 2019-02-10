@@ -20,6 +20,9 @@ class App extends Component {
               return (
                 <div className="App">
                   <h1>ランダム犬画像ギャラリー</h1>
+                  <div className="dogGallery">
+                    <img className="dogImage" src={image} width="300" heigh="200" alt="randomDog" />
+                  </div>
                 </div>
               );
             }
