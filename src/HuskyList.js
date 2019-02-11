@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
+import { Button } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 import { HUSKY_IMAGES } from './graphql';
 import './HuskyList.css';
@@ -34,6 +36,10 @@ class HuskyList extends Component {
               <React.Fragment>
                 <h1>ハスキー犬画像</h1>
                 <div>
+                  <Button primary onClick={this.refreshPage}>
+                    <span role="img" aria-label="footprint">🐾</span>
+                    Reload
+                  </Button>
                   <ul>
                     {
                       huskyList.map((item, index) =>

@@ -24,8 +24,11 @@ class Random extends Component {
 
             return (
               <div className="App">
-                <h1>ランダム犬画像ギャラリー</h1>
-                <Button primary onClick={this.refreshPage}>Reload</Button>
+                <h1>ランダム犬画像</h1>
+                <Button primary onClick={this.refreshPage}>
+                  <span role="img" aria-label="footprint">🐾</span>
+                  Reload
+                </Button>
                 <div className="dogGallery">
                   <img className="dogImage" src={image} width="300" heigh="200" alt="randomDog" />
                 </div>
