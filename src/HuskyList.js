@@ -8,7 +8,15 @@ class HuskyList extends Component {
   refreshPage = () => {
     window.location.reload();
   }
-  
+
+  get_ramdom_images = (images) => {
+    let huskyList = []
+    for (var i = 0; i < 10; i++ ) {
+      huskyList.push(images[Math.floor(Math.random() * images.length)]);
+    }
+    return huskyList;
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -19,9 +27,23 @@ class HuskyList extends Component {
             if (error) return `Error! ${error.message}`;
 
             const images = data.huskyCrazy.images;
-            console.log(images);
+            const huskyList = this.get_ramdom_images(images);
+
             return (
-              <h1>ハスキー犬画像</h1>
+              <React.Fragment>
+                <h1>ハスキー犬画像</h1>
+                <div>
+                  <ul>
+                    {
+                      huskyList.map((item, index) =>
+                        <li key={index} className="huskyItem">
+                          <img src={item} alt="huskyImage" />
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
+              </React.Fragment>
             )
           }
         }
