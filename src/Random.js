@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Query } from 'react-apollo';
 import { Button } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
@@ -29,6 +30,7 @@ class Random extends Component {
                   <span role="img" aria-label="footprint">🐾</span>
                   Reload
                 </Button>
+                <Link to="/husky"><Button>Husky</Button></Link>
                 <div className="dogGallery">
                   <img className="dogImage" src={image} width="300" heigh="200" alt="randomDog" />
                 </div>
