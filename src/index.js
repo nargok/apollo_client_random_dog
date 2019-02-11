@@ -3,12 +3,18 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import { Route } from 'react-router';
 import './index.css';
-import App from './App';
+
+import Random from './Random';
+import HuskyList from './HuskyList';
+
 import * as serviceWorker from './serviceWorker';
 
 render((
   <BrowserRouter>
-    <Route path="/" component={App} />
+    <React.Fragment>
+      <Route path="/random" component={Random} />
+      <Route path="/husky" component={HuskyList} />
+    </React.Fragment>
   </BrowserRouter>
   ),document.getElementById('root'));
 

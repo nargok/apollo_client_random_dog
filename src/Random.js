@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import client from './client';
 import { GET_SINGLE_RANDOM_DOG } from './graphql';
 
-class App extends Component {
+class Random extends Component {
 
   refreshPage = () => {
     window.location.reload();
@@ -41,4 +41,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Random;
