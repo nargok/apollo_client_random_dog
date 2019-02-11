@@ -8,6 +8,7 @@ import client from './client';
 
 import './index.css';
 
+import Top from './Top';
 import Random from './Random';
 import HuskyList from './HuskyList';
 
@@ -17,6 +18,7 @@ render((
   <ApolloProvider client={client}>
     <BrowserRouter>
       <React.Fragment>
+        <Route exact path="/" component={Top} />
         <Route path="/random" component={Random} />
         <Route path="/husky" component={HuskyList} />
       </React.Fragment>
