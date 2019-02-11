@@ -8,3 +8,11 @@ export const GET_SINGLE_RANDOM_DOG = gql`
   }
 `;
 
+export const HUSKY_IMAGES = gql`
+  {
+    huskyCrazy {
+      status
+      images
+    }
+  }
+`;
